@@ -6,4 +6,4 @@ create table characters (
     species varchar(128),
     alignment varchar(128),
     primary key (id)
-)
+);
