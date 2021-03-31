@@ -1,5 +1,7 @@
+drop table characters;
+
 create table characters (
-    id int not null,
+    id int not null auto_increment,
     name varchar(128) not null,
     media varchar(128),
     franchise varchar(128),
