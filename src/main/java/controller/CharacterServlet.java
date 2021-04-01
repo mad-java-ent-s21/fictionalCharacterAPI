@@ -1,6 +1,6 @@
 package controller;
 
-import persistence.characterDao;
+import persistence.GenericDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 
 public class CharacterServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException {
-        characterDao dao = new characterDao();
+        GenericDao dao = new GenericDao();
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
-        dispatcher.forward(req, res);
+        //dispatcher.forward(req, res);
     }
 }

@@ -4,3 +4,4 @@
 |------|------|-------|
 |Week 9|team|collaborated on proj. plan, repo creation, timeline, problem statement, and takeaways.|
 |Week 10|Walker|added dependencies to pom.xml|
+|Week 10|Team|created Enitity, GenericDao, shell of servlet, sql for character table| 
