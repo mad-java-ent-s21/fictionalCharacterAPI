@@ -1,15 +1,20 @@
 package rest.service;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.logging.log4j.core.jackson.Log4jJsonObjectMapper;
+import persistence.GenericDao;
+import entity.Character;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
+import java.util.List;
 
 @Path("/name")
 public class GetByCharacterName {
-
-    private String name = "";
 
     // The Java method will process HTTP GET requests
     @GET
@@ -17,16 +22,16 @@ public class GetByCharacterName {
     @Produces("text/plain")
 
     @Path("{name}")
-    public Response getMessage(@PathParam("name") String name) {
+    public Response getCharacterByName(@PathParam("name") String name) throws JsonProcessingException {
 
-        String output = "Hello ";
+        GenericDao characterGenericDao = new GenericDao(Character.class);
+//        List<Character> foundCharacter = characterGenericDao.findByPropertyEqual("name", name);
+        List foundCharacters = characterGenericDao.getAll();
 
-        if (null != name) {
-            output += name;
-        } else {
-            output += "World";
-        }
+        ObjectMapper mapper = new ObjectMapper();
+        String foundCharactersJson = mapper.writeValueAsString(foundCharacters);
 
-        return Response.status(200).entity(output).build();
+        String test = "test";
+        return Response.status(200).entity(foundCharactersJson).build();
     }
 }

@@ -9,8 +9,5 @@
         <module name="fictionalCharacterAPI" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="fictionalCharacterAPI" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>
