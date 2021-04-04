@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author whurd
  */
 @Entity(name = "Character")
-@Table(name = "characters") // case sensitive!
+@Table(name = "characters")
 public class Character {
 
     @Id
