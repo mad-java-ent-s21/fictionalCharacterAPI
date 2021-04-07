@@ -22,16 +22,17 @@ public class GetByCharacterName {
     @Produces("text/plain")
 
     @Path("{name}")
-    public Response getCharacterByName(@PathParam("name") String name) throws JsonProcessingException {
+    public Response getCharacterByName(@PathParam("name") int name) throws JsonProcessingException {
 
         GenericDao characterGenericDao = new GenericDao(Character.class);
-//        List<Character> foundCharacter = characterGenericDao.findByPropertyEqual("name", name);
-        List foundCharacters = characterGenericDao.getAll();
+        Character foundCharacter = (Character) characterGenericDao.getById(name);
+        //List foundCharacters = characterGenericDao.getByName();
+
 
         ObjectMapper mapper = new ObjectMapper();
-        String foundCharactersJson = mapper.writeValueAsString(foundCharacters);
+        String foundCharacterJson = mapper.writeValueAsString(foundCharacter);
 
         String test = "test";
-        return Response.status(200).entity(foundCharactersJson).build();
+        return Response.status(200).entity(foundCharacterJson).build();
     }
 }
