@@ -72,7 +72,7 @@ public class GenericDao<T> {
     }
 
     /**
-     * Gets by id.
+     * Gets by name.
      *
      * @param <T> the type parameter
      * @param name  the name
@@ -86,7 +86,7 @@ public class GenericDao<T> {
     }
 
     /**
-     * Delete.
+     * Delete
      *
      * @param entity the entity
      */
