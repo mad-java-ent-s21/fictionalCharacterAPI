@@ -116,6 +116,7 @@
       <version>${javax.version}</version>
     </dependency>
 
+  <!-- Jackson -->
     <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>

@@ -5,12 +5,12 @@
 <hibernate-configuration>
     <session-factory>
 
-        <property name="connection.url">jdbc:mysql://localhost:3306/fictional_characters</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/character_db</property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
 
 <!--        This section is for the test db credentials. comment out deploying to prod-->
         <property name="connection.username">root</property>
-        <property name="connection.password">student</property>
+        <property name="connection.password">floss1chips2</property>
 
 <!--        This section is for the production db credentials. comment out when working locally-->
 <!--        <property name="connection.username">root</property>-->
