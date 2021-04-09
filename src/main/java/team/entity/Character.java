@@ -1,11 +1,8 @@
-package entity;
+package team.entity;
 
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.sql.Date;
-import java.util.Objects;
-
 
 
 /**

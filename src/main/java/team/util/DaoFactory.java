@@ -1,6 +1,6 @@
-package util;
+package team.util;
 
-import persistence.GenericDao;
+import team.persistence.GenericDao;
 
 /**
  * Created by cvang on 3/31/2021.

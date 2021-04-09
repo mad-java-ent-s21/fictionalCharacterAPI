@@ -1,9 +1,7 @@
-import com.fasterxml.jackson.databind.ObjectMapper;
-import entity.Character;
+import team.entity.Character;
 
 import org.junit.Test;
-import javax.ws.rs.client.*;
-import javax.ws.rs.core.MediaType;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestServiceClient {
