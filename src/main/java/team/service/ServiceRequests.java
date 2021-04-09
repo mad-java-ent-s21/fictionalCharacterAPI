@@ -11,7 +11,7 @@ public class ServiceRequests extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
-        h.add(GetByCharacterName.class );
+        h.add(CharacterRequests.class );
         return h;
     }
 }

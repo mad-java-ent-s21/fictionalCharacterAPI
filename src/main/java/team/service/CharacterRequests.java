@@ -13,7 +13,7 @@ import javax.ws.rs.core.Response;
 import java.io.IOException;
 
 @Path("/name")
-public class GetByCharacterName {
+public class CharacterRequests {
 
     private String foundCharacterJson;
 
@@ -33,7 +33,7 @@ public class GetByCharacterName {
         //List foundCharacters = characterGenericDao.getByName();
 
         ObjectMapper mapper = new ObjectMapper();
-        
+
 
         try {
             foundCharacterJson = mapper.writeValueAsString(foundCharacter);
