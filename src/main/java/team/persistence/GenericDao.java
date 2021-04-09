@@ -1,4 +1,4 @@
-package persistence;
+package team.persistence;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -76,7 +76,7 @@ public class GenericDao<T> {
      *
      * @param <T> the type parameter
      * @param name  the name
-     * @return the entity
+     * @return the team.entity
      */
     public <T> T getByName(String name) {
         Session session = getSession();
@@ -88,7 +88,7 @@ public class GenericDao<T> {
     /**
      * Delete
      *
-     * @param entity the entity
+     * @param entity the team.entity
      */
     public void delete(T entity) {
         Session session = getSession();
@@ -101,7 +101,7 @@ public class GenericDao<T> {
     /**
      * Insert int.
      *
-     * @param entity the entity
+     * @param entity the team.entity
      * @return the int
      */
     public int insert(T entity) {
@@ -117,7 +117,7 @@ public class GenericDao<T> {
     /**
      * Save or update.
      *
-     * @param entity the entity
+     * @param entity the team.entity
      */
     public void saveOrUpdate(T entity) {
         Session session = getSession();

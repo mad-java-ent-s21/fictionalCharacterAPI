@@ -1,8 +1,8 @@
-package rest.service;
+package team.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import entity.Character;
-import persistence.GenericDao;
+import team.entity.Character;
+import team.persistence.GenericDao;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 

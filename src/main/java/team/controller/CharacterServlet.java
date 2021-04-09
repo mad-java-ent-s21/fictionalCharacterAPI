@@ -1,6 +1,6 @@
-package controller;
+package team.controller;
 
-import persistence.GenericDao;
+import team.persistence.GenericDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
