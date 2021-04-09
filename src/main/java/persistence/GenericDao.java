@@ -165,7 +165,7 @@ public class GenericDao<T> {
     }
 
     private Session getSession() {
-        return persistence.SessionFactoryProvider.getSessionFactory().openSession();
+        return SessionFactoryProvider.getSessionFactory().openSession();
 
     }
 }
