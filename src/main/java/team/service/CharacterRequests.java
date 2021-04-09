@@ -3,6 +3,7 @@ package team.service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import team.persistence.GenericDao;
+import team.entity.Character;
 
 
 import javax.ws.rs.GET;
