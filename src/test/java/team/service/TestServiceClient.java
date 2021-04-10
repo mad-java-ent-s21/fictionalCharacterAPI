@@ -1,3 +1,5 @@
+package team.service;
+
 import team.entity.Character;
 
 import org.junit.Test;
