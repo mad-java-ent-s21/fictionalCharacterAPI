@@ -8,3 +8,4 @@
 |week 10|Tim|Added GetByCharacterName and ServiceRequests classes for rest functionality. Added hibernate config files. Wired up GetCharacterByName to use jackson to return Character objects as JSON|
 |week 10|Walker|Got the getByName service to work with a param although only with id, not name yet|
 |week 10|Tim|Addressed error with GenericDao, restructured packages to all belong to one root package, added LOG4J,|
+|week 10|Walker|Got most of the code to test the dao although there are a lot of errors, need others input|
