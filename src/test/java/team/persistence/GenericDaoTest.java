@@ -2,7 +2,9 @@ package team.persistence;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import team.util.Database;
+//import team.testUtil.Database;
+import team.entity.Character;
+
 
 
 import java.util.List;
@@ -16,21 +18,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
  public class GenericDaoTest {
 
-    GenericDao<Character> dao;
+     GenericDao<Character> dao;
 
     /**
      * Run set up tasks before each test:
      * 1. execute sql which deletes everything from the table and inserts records)
      * 2. Create any objects needed in the tests
      */
-    @BeforeEach
+    /*@BeforeEach
     void setUp() {
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
 
+
         dao = new GenericDao<>();
-    }
+    }*/
 
     /**
      * Verify successful retrieval of a Character
