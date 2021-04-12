@@ -1,0 +1,8 @@
+POST http://localhost/insert_character/{{name}}/{{media}}/{{franchise}}/{{species}}/{{alignment}}
+
+###
+
+POST http://localhost/insert_character/{{name}}/{{media}}/{{franchise}}/{{species}}/{{alignment}}
+
+###
+

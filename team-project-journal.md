@@ -9,5 +9,10 @@
 |week 10|Walker|Got the getByName service to work with a param although only with id, not name yet|
 |week 10|Tim|Addressed error with GenericDao, restructured packages to all belong to one root package, added LOG4J, refactored the class handling the actual API requests. |
 |week 10|Walker|Got most of the code to test the dao although there are a lot of errors, need others input|
+<<<<<<< HEAD
 |week 11|Chris|Got GenericDaoTest to work|
 |week 11|Walker|Added basic documentation, host will need to be changed to AWS instance address|
+=======
+|week 11|Walker|Added basic documentation, host will need to be changed to AWS instance address|
+|week 11|Walker|Could not get the post to work until I put it in the same class as the get, the CharacterRequest is the only class in service package that I have been able to get a response from in SOAP|
+>>>>>>> c1edbc6883b53d33d175707a68025d5d45c69de7
