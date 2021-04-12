@@ -10,3 +10,4 @@
 |week 10|Tim|Addressed error with GenericDao, restructured packages to all belong to one root package, added LOG4J, refactored the class handling the actual API requests. |
 |week 10|Walker|Got most of the code to test the dao although there are a lot of errors, need others input|
 |week 11|Walker|Added basic documentation, host will need to be changed to AWS instance address|
+|week 11|Walker|Could not get the post to work until I put it in the same class as the get, the CharacterRequest is the only class in service package that I have been able to get a response from in SOAP|
