@@ -10,9 +10,10 @@
 
     <p><strong>Host:</strong> localhost:8080</p>
     <p><strong>Resource Directory:</strong> /fictionalCharacterAPI_war/service</p>
-    <p><strong>Resources:</strong> <ul><li>/name</li><li>/insert_character</li></ul></p>
-    <hr>
+    <p><strong>Resource:</strong> <ul><li>/name</li></ul></p>
+    <br>
     <h3>/name</h3>
+    <hr>
 <p><strong>Method:</strong> GET</p>
 <p>Required Parameters</p>
 <li>1. Id</li>
@@ -22,18 +23,18 @@
 <p>The /name resource uses the GET method and a number parameter to fetch a character in the fictional character
 database according to its id</p>
 <hr>
-    <h3>/insert_character</h3>
+
     <p><strong>Method:</strong> POST</p>
 <p>Required Parameters</p>
-<li>1. Name</li>
-<li>2. Media</li>
-<li>3. Franchise</li>
-<li>4. Species</li>
-<li>5. Alignment</li>
+<li>1. name</li>
+<li>2. media</li>
+<li>3. franchise</li>
+<li>4. species</li>
+<li>5. agitlignment</li>
 
     <p>Optional Parameters</p>
     <li>None</li>
-    <p><strong>Example:</strong> localhost:8080/fictionCharacterAPI_war/service/insert_character</p>
-<p>Send form data to the endpoint to insert a new fictional character into the database</p>
+    <p><strong>Example:</strong> localhost:8080/fictionCharacterAPI_war/service/name</p>
+<p>Send json data defining the above properties to the endpoint to insert a new fictional character into the database</p>
 </body>
 </html>
