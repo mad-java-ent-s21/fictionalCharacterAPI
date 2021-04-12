@@ -2,10 +2,8 @@ package team.persistence;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-//import team.testUtil.Database;
 import team.entity.Character;
-
-
+import team.testUtil.Database;
 
 import java.util.List;
 
@@ -18,22 +16,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
  public class GenericDaoTest {
 
-     GenericDao<Character> dao;
+     GenericDao dao;
 
     /**
      * Run set up tasks before each test:
      * 1. execute sql which deletes everything from the table and inserts records)
      * 2. Create any objects needed in the tests
      */
-    /*@BeforeEach
+    @BeforeEach
     void setUp() {
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
 
 
-        dao = new GenericDao<>();
-    }*/
+        dao = new GenericDao(Character.class);
+    }
 
     /**
      * Verify successful retrieval of a Character
@@ -41,9 +39,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
     @Test
     void getByIdSuccess() {
 
-        Character retrievedCharacter = dao.getById(1);
-        assertNotNull(retrievedCharacter);
-       // assertEquals("Gandalf", retrievedCharacter.getName());
+        Character retrievedCharacter = (Character) dao.getById(1);
+//        assertNotNull(retrievedCharacter);
+        assertEquals("Gandalf", retrievedCharacter.getName());
 
 
     }
@@ -53,13 +51,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
      */
     @Test
     void insertSuccess() {
-        /*Character newCharacter = new Character("1", "2", "3", "4", "5");
+//        Character newCharacter = new Character("Spawn", "Comic", "Spawn", "Hellspawn", "Neutral");
+//
+//        int id = dao.insert(newCharacter);
+//        assertNotEquals(0, id);
+//        Character insertedCharacter = (Character) dao.getById(id);
+//        assertEquals(newCharacter, insertedCharacter);
 
-
+        Character newCharacter;
+        newCharacter = new Character("Spawn", "Comic", "Spawn", "Hellspawn", "Neutral");
         int id = dao.insert(newCharacter);
-        assertNotEquals(0, id);
-        Character insertedCharacter = dao.getById(id);
-        assertEquals(newCharacter, insertedCharacter);*/
+        assertNotEquals(0,id);
+        Character insertedCharacter = (Character) dao.getById(id);
+        assertEquals(id, insertedCharacter.getId());
+        assertEquals("Spawn", insertedCharacter.getName());
 
     }
     /**
@@ -68,11 +73,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
     @Test
     void updateSuccess() {
 
-      /*  Character characterToUpdate = dao.getById(1);
-        characterToUpdate.setName("mithrandir");
-        dao.saveOrUpdate(characterToUpdate);
-        Character characterAfterUpdate = dao.getById(1);
-        assertEquals(characterToUpdate, characterAfterUpdate);*/
+//        Character characterToUpdate = (Character) dao.getById(1);
+//        characterToUpdate.setName("mithrandir");
+//        dao.saveOrUpdate(characterToUpdate);
+//        Character characterAfterUpdate = (Character) dao.getById(1);
+//        assertEquals(characterToUpdate, characterAfterUpdate);
+
+        String newName = "Harry Wizard";
+
+        Character userUpdate = (Character) dao.getById(1);
+        userUpdate.setName(newName);
+        dao.saveOrUpdate(userUpdate);
+        Character retrieveUser = (Character) dao.getById(1);
+        assertEquals(newName, retrieveUser.getName());
     }
 
     /**

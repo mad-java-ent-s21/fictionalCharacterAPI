@@ -11,6 +11,7 @@
 <!--        This section is for the test db credentials. comment out deploying to prod-->
         <property name="connection.username">root</property>
         <property name="connection.password">floss1chips2</property>
+<!--        <property name="connection.password">student</property>-->
 
 <!--        This section is for the production db credentials. comment out when working locally-->
 <!--        <property name="connection.username">root</property>-->
