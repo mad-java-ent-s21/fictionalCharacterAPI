@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Documentation</title>
+</head>
+<body>
+    <h2>Character Fictional API</h2>
+    <h3>Documentation</h3>
+
+    <p>Host: https://localhost/8080</p>
+    <p>Rescource directory: /fictionalCharacterAPI/service</p>
+    <p>Rescources: <ul><li>/name</li><li>/insert_character</li></ul></p>
+
+    <h4>/name</h4>
+<p>GET</p>
+<p>Required Parameters</p>
+<p>1. Id</p>
+    <p>Optional Parameters</p>
+    <p>None</p>
+<p>Example: https://localhost/8080/service/name/1</p>
+<p>The /name resource uses the GET method and a number parameter to fetch a character in the fictional character
+database according to its id</p>
+
+    <h4>/insert_character</h4>
+    <p>POST</p>
+<p>Required Parameters</p>
+<p>1. Name</p>
+<p>2. Media</p>
+<p>3. Franchise</p>
+<p>4. Species</p>
+<p>5. Alignment</p>
+
+    <p>Optional Parameters</p>
+    <p>None</p>
+    <p>Example: https://localhost/8080/service/insert_character</p>
+<p>Send form data to the endpoint to insert a new fictional character into the database</p>
+</body>
+</html>
