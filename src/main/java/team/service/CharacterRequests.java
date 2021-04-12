@@ -11,8 +11,8 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
 
-@Path("/name")
-public class CharacterRequests_old {
+@Path("/requests")
+public class CharacterRequests {
 
     private String foundCharacterJson;
 
