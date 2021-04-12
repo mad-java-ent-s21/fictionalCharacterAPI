@@ -9,3 +9,4 @@
 |week 10|Walker|Got the getByName service to work with a param although only with id, not name yet|
 |week 10|Tim|Addressed error with GenericDao, restructured packages to all belong to one root package, added LOG4J, refactored the class handling the actual API requests. |
 |week 10|Walker|Got most of the code to test the dao although there are a lot of errors, need others input|
+|week 11|Walker|Added basic documentation, host will need to be changed to AWS instance address|
