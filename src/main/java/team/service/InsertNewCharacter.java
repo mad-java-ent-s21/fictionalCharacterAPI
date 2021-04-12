@@ -17,6 +17,7 @@ public class InsertNewCharacter {
         Character character = new Character(name, media, franchise, species, alignment);
         // insert character
         postCharacter.insert(character);
+
         return Response.status(200).entity(character).build();
     }
 }
