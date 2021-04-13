@@ -42,6 +42,9 @@ database according to its media release (book, movie, series, etc)</p>
 <p><strong>Example:</strong> localhost:8080/fictionalCharacterAPI_war/service/character/alignment/good</p>
 <p>The /name resource uses the GET method and an alignment parameter to fetch a character in the fictional character
     database according to its alignment (good, evil, chaotic neutral, etc)</p>
+<li>7. Multi-Parameter Request</li>
+<p><strong>Example:</strong> localhost:8080/fictionalCharacterAPI_war/service/character/media/book/name/Gandalf</p>
+<p>The Multi-parameter request is made by using 2 of the resources from 2-6. The /character resource supports one resource like media with a search parameter, and can then search the results with another resource like searching book characters for good ones.</p>
 <hr>
 
     <p><strong>Method:</strong> POST</p>
