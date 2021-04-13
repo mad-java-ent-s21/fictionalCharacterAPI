@@ -27,7 +27,7 @@ public class CharacterRequests {
         Map<String, Object> searchParamMap = new HashMap<>();
         searchParamMap.put(column, value);
 
-        return Response.status(200).entity(foundCharacterJson).build();
+        return Response.status(200).entity(processRequest(searchParamMap)).build();
     }
 
     @GET
