@@ -12,6 +12,7 @@ public class ServiceRequests extends Application {
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
         h.add(CharacterRequests.class );
+        h.add(InsertNewCharacter.class);
         return h;
     }
 }
