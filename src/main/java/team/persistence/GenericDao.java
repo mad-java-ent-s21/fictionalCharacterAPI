@@ -21,7 +21,7 @@ import java.util.Map;
 public class GenericDao<T> {
 
     private Class<T> type;
-    private final Logger logger = LogManager.getLogger(this.getClass());
+//    private final Logger logger = LogManager.getLogger(this.getClass());
 
 
     /**
