@@ -119,6 +119,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
         List<Character> characters = dao.getAll();
         assertEquals(4, characters.size());
     }
+
+    @Test
+    void getByPropertySuccess() {
+        String searchName = "Gandalf";
+        String category = "name";
+        List<Character> characterList = dao.findByPropertyEqual(category, searchName);
+        for (Character name: characterList) {
+            assertEquals(searchName, name.getName());
+        }
+    }
 }
 
 
