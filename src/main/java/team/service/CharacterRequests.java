@@ -64,7 +64,8 @@ public class CharacterRequests {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{column}/{value}/{column2}/{value2}")
     public Response multiParamRequest(@PathParam("column") String column, @PathParam("value") String value,
-                                             @PathParam("column2") String secondaryColumn, @PathParam("value2") String secondaryValue) throws JsonProcessingException {
+                                      @PathParam("column2") String secondaryColumn, @PathParam("value2") String secondaryValue)
+            throws JsonProcessingException {
 
         Map<String, Object> searchParamMap = new HashMap<>();
         searchParamMap.put(column, value);
