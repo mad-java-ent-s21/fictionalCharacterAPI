@@ -16,3 +16,4 @@
 |week 11|Walker|Added basic documentation, host will need to be changed to AWS instance address|
 |week 11|Walker|This video helped for the post: https://www.youtube.com/watch?v=6HWUrp6buqQ&t=70s Could not get the post to work until I put it in the same class as the get, the CharacterRequest is the only class in service package that I have been able to get a response from in SOAP|
 |week 11|Zane|Added functionality for all columns to be searched in the DB with the same method CharacterRequests.processRequest() I also moved the updated insert method Walker made into the InsertNewCharacter class and updated the url to have better naming|
+|week 12|Zane|Deployed to AWS successfully at the url: http://3.142.182.83:8080/ I also updated the documentation examples to use the url instead of localhost|

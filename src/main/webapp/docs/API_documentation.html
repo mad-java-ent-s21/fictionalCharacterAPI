@@ -9,8 +9,8 @@
 
 
     <p><strong>Host:</strong> localhost:8080</p>
-    <p><strong>Resource Directory:</strong> /fictionalCharacterAPI_war/service</p>
-    <p><strong>Resource:</strong> <ul><li>/name</li></ul></p>
+    <p><strong>Resource Directory:</strong> /fictionalCharacterAPI_war</p>
+    <p><strong>Resource:</strong> <ul><li>/service</li></ul></p>
     <br>
     <h3>/character/id</h3>
     <hr>
@@ -19,31 +19,31 @@
 <li>1. Id</li>
     <p>Optional Parameters</p>
     <li>None</li>
-<p><strong>Example:</strong> localhost:8080/fictionalCharacterAPI_war/service/character/id/1</p>
+<p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI_war/service/character/id/1</p>
 <p>The /id resource uses the GET method and a number parameter to fetch a character in the fictional character
 database according to its id</p>
 <li>2. Name</li>
-<p><strong>Example:</strong> localhost:8080/fictionalCharacterAPI_war/service/character/name/Luke%20Skywalker</p>
+<p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI_war/service/character/name/Luke%20Skywalker</p>
 <p>The /name resource uses the GET method and a name parameter to fetch a character in the fictional character
 database according to its name</p>
 <li>3. Media</li>
-<p><strong>Example:</strong> localhost:8080/fictionalCharacterAPI_war/service/character/media/book</p>
+<p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI_war/service/character/media/book</p>
 <p>The /name resource uses the GET method and a media parameter to fetch a character in the fictional character
 database according to its media release (book, movie, series, etc)</p>
 <li>4. Franchise</li>
-<p><strong>Example:</strong> localhost:8080/fictionalCharacterAPI_war/service/character/franchise/Lord%20of%20the%20Rings</p>
+<p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI_war/service/character/franchise/Lord%20of%20the%20Rings</p>
 <p>The /name resource uses the GET method and a franchise parameter to fetch a character in the fictional character
     database according to the franchise the character belongs to</p>
 <li>5. Species</li>
-<p><strong>Example:</strong> localhost:8080/fictionalCharacterAPI_war/service/character/species/human</p>
+<p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI_war/service/character/species/human</p>
 <p>The /name resource uses the GET method and a species parameter to fetch a character in the fictional character
     database according to its species</p>
 <li>6. Alignment</li>
-<p><strong>Example:</strong> localhost:8080/fictionalCharacterAPI_war/service/character/alignment/good</p>
+<p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI_war/service/character/alignment/good</p>
 <p>The /name resource uses the GET method and an alignment parameter to fetch a character in the fictional character
     database according to its alignment (good, evil, chaotic neutral, etc)</p>
 <li>7. Multi-Parameter Request</li>
-<p><strong>Example:</strong> localhost:8080/fictionalCharacterAPI_war/service/character/media/book/name/Gandalf</p>
+<p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI_war/service/character/media/book/name/Gandalf</p>
 <p>The Multi-parameter request is made by using 2 of the resources from 2-6. The /character resource supports one resource like media with a search parameter, and can then search the results with another resource like searching book characters for good ones.</p>
 <hr>
 
@@ -57,7 +57,7 @@ database according to its media release (book, movie, series, etc)</p>
 
     <p>Optional Parameters</p>
     <li>None</li>
-    <p><strong>Example:</strong> localhost:8080/fictionCharacterAPI_war/service/insert</p>
+    <p><strong>Example:</strong> http://3.142.182.83:8080/fictionCharacterAPI_war/service/insert</p>
 <p>Send json data defining the above properties to the endpoint to insert a new fictional character into the database</p>
 </body>
 </html>
