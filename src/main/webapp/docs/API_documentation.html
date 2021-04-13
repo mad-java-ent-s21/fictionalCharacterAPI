@@ -2,49 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" Type="text/css" href="../styles.css">
     <title>API Documentation</title>
 </head>
 <body>
     <h2>Fictional Character API Documentation</h2>
+    <a href="../index.jsp">Home</a><br>
+    <a href="../search.jsp">Search API Test</a><br><br>
 
 
-    <p><strong>Host:</strong> localhost:8080</p>
-    <p><strong>Resource Directory:</strong> /fictionalCharacterAPI_war</p>
+    <p><strong>Host:</strong> http://3.142.182.83:8080/</p>
+    <p><strong>Resource Directory:</strong> /fictionalCharacterAPI</p>
     <p><strong>Resource:</strong> <ul><li>/service</li></ul></p>
     <br>
-    <h3>/character/id</h3>
+<!--    <h3>/character/id</h3>-->
     <hr>
 <p><strong>Method:</strong> GET</p>
 <p>Required Parameters</p>
+<li>Category</li>
+<div class="getInfo">
+    <p>An example is by searching by id, use the /id resource.</p>
+    <p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI/service/character<strong>/id</strong></p>
+</div>
+<br>
+<p>Optional Parameters</p>
+<li>Value</li>
+<div class="getInfo">
+    <p>Add on the value after category.</p>
+    <p><strong>Example:</strong> Add the value after
+        http://3.142.182.83:8080/fictionalCharacterAPI/service/character/id<strong>/4</strong></p>
+</div>
+
+<br>
+<h4>Categories</h4>
 <li>1. Id</li>
-    <p>Optional Parameters</p>
-    <li>None</li>
-<p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI_war/service/character/id/1</p>
-<p>The /id resource uses the GET method and a number parameter to fetch a character in the fictional character
-database according to its id</p>
+<div class="getInfo">
+    <p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI/service/character/id/1</p>
+    <p>The /id resource uses the GET method and a number parameter to fetch a character in the fictional character
+    database according to its id</p>
+</div>
+
 <li>2. Name</li>
-<p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI_war/service/character/name/Luke%20Skywalker</p>
-<p>The /name resource uses the GET method and a name parameter to fetch a character in the fictional character
-database according to its name</p>
+<div class="getInfo">
+    <p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI/service/character/name/Luke%20Skywalker</p>
+    <p>The /name resource uses the GET method and a name parameter to fetch a character in the fictional character
+    database according to its name</p>
+</div>
+
 <li>3. Media</li>
-<p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI_war/service/character/media/book</p>
-<p>The /name resource uses the GET method and a media parameter to fetch a character in the fictional character
-database according to its media release (book, movie, series, etc)</p>
+<div class="getInfo">
+    <p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI/service/character/media/book</p>
+    <p>The /name resource uses the GET method and a media parameter to fetch a character in the fictional character
+    database according to its media release (book, movie, series, etc)</p>
+</div>
+
 <li>4. Franchise</li>
-<p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI_war/service/character/franchise/Lord%20of%20the%20Rings</p>
-<p>The /name resource uses the GET method and a franchise parameter to fetch a character in the fictional character
-    database according to the franchise the character belongs to</p>
+<div class="getInfo">
+    <p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI/service/character/franchise/Lord%20of%20the%20Rings</p>
+    <p>The /name resource uses the GET method and a franchise parameter to fetch a character in the fictional character
+        database according to the franchise the character belongs to</p>
+</div>
+
 <li>5. Species</li>
-<p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI_war/service/character/species/human</p>
-<p>The /name resource uses the GET method and a species parameter to fetch a character in the fictional character
-    database according to its species</p>
+<div class="getInfo">
+    <p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI/service/character/species/human</p>
+    <p>The /name resource uses the GET method and a species parameter to fetch a character in the fictional character
+        database according to its species</p>
+</div>
+
 <li>6. Alignment</li>
-<p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI_war/service/character/alignment/good</p>
-<p>The /name resource uses the GET method and an alignment parameter to fetch a character in the fictional character
-    database according to its alignment (good, evil, chaotic neutral, etc)</p>
+<div class="getInfo">
+    <p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI/service/character/alignment/good</p>
+    <p>The /name resource uses the GET method and an alignment parameter to fetch a character in the fictional character
+        database according to its alignment (good, evil, chaotic neutral, etc)</p>
+</div>
+
 <li>7. Multi-Parameter Request</li>
-<p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI_war/service/character/media/book/name/Gandalf</p>
-<p>The Multi-parameter request is made by using 2 of the resources from 2-6. The /character resource supports one resource like media with a search parameter, and can then search the results with another resource like searching book characters for good ones.</p>
+<div class="getInfo">
+    <p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI/service/character/media/book/name/Gandalf</p>
+    <p>The Multi-parameter request is made by using 2 of the resources from 2-6. The /character resource supports one resource like media with a search parameter, and can then search the results with another resource like searching book characters for good ones.</p>
+</div>
 <hr>
 
     <p><strong>Method:</strong> POST</p>
@@ -55,9 +92,12 @@ database according to its media release (book, movie, series, etc)</p>
 <li>4. species</li>
 <li>5. alignment</li>
 
-    <p>Optional Parameters</p>
-    <li>None</li>
-    <p><strong>Example:</strong> http://3.142.182.83:8080/fictionCharacterAPI_war/service/insert</p>
-<p>Send json data defining the above properties to the endpoint to insert a new fictional character into the database</p>
+<!--    <p>Optional Parameters</p>-->
+<!--    <li>None</li>-->
+<div class="getInfo">
+    <p><strong>Example:</strong> http://3.142.182.83:8080/fictionalCharacterAPI/service/insert</p>
+    <p>Send json data defining the above properties to the endpoint to insert a new fictional character into the
+        database</p>
+</div>
 </body>
 </html>
