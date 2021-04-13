@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * This class receives a post request with JSON data and processes it to load
  * the contribution data to the database.
- *
+ * @author Zane Miller
  */
 @Path("/insert")
 public class InsertNewCharacter {
