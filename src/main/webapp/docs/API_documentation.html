@@ -12,16 +12,36 @@
     <p><strong>Resource Directory:</strong> /fictionalCharacterAPI_war/service</p>
     <p><strong>Resource:</strong> <ul><li>/name</li></ul></p>
     <br>
-    <h3>/name</h3>
+    <h3>/character/id</h3>
     <hr>
 <p><strong>Method:</strong> GET</p>
 <p>Required Parameters</p>
 <li>1. Id</li>
     <p>Optional Parameters</p>
     <li>None</li>
-<p><strong>Example:</strong> localhost:8080/fictionalCharacterAPI_war/service/name/1</p>
-<p>The /name resource uses the GET method and a number parameter to fetch a character in the fictional character
+<p><strong>Example:</strong> localhost:8080/fictionalCharacterAPI_war/service/character/id/1</p>
+<p>The /id resource uses the GET method and a number parameter to fetch a character in the fictional character
 database according to its id</p>
+<li>2. Name</li>
+<p><strong>Example:</strong> localhost:8080/fictionalCharacterAPI_war/service/character/name/Luke%20Skywalker</p>
+<p>The /name resource uses the GET method and a name parameter to fetch a character in the fictional character
+database according to its name</p>
+<li>3. Media</li>
+<p><strong>Example:</strong> localhost:8080/fictionalCharacterAPI_war/service/character/media/book</p>
+<p>The /name resource uses the GET method and a media parameter to fetch a character in the fictional character
+database according to its media release (book, movie, series, etc)</p>
+<li>4. Franchise</li>
+<p><strong>Example:</strong> localhost:8080/fictionalCharacterAPI_war/service/character/franchise/Lord%20of%20the%20Rings</p>
+<p>The /name resource uses the GET method and a franchise parameter to fetch a character in the fictional character
+    database according to the franchise the character belongs to</p>
+<li>5. Species</li>
+<p><strong>Example:</strong> localhost:8080/fictionalCharacterAPI_war/service/character/species/human</p>
+<p>The /name resource uses the GET method and a species parameter to fetch a character in the fictional character
+    database according to its species</p>
+<li>6. Alignment</li>
+<p><strong>Example:</strong> localhost:8080/fictionalCharacterAPI_war/service/character/alignment/good</p>
+<p>The /name resource uses the GET method and an alignment parameter to fetch a character in the fictional character
+    database according to its alignment (good, evil, chaotic neutral, etc)</p>
 <hr>
 
     <p><strong>Method:</strong> POST</p>
@@ -34,7 +54,7 @@ database according to its id</p>
 
     <p>Optional Parameters</p>
     <li>None</li>
-    <p><strong>Example:</strong> localhost:8080/fictionCharacterAPI_war/service/name</p>
+    <p><strong>Example:</strong> localhost:8080/fictionCharacterAPI_war/service/insert</p>
 <p>Send json data defining the above properties to the endpoint to insert a new fictional character into the database</p>
 </body>
 </html>
