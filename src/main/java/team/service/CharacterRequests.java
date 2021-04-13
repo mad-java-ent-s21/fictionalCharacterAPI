@@ -10,7 +10,6 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,19 +22,10 @@ public class CharacterRequests {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{column}/{value}")
-    public Response processRequest(@PathParam("column") String column, @PathParam("value") String value) throws JsonProcessingException {
-        GenericDao dao = new GenericDao(Character.class);
+    public Response singleParamRequest(@PathParam("column") String column, @PathParam("value") String value) throws JsonProcessingException {
 
-
-        List<Character> characters = dao.findByPropertyEqual(column, value);
-
-        ObjectMapper mapper = new ObjectMapper();
-
-        try {
-            foundCharacterJson = mapper.writeValueAsString(characters);
-        } catch (IOException ioe) {
-
-        }
+        Map<String, Object> searchParamMap = new HashMap<>();
+        searchParamMap.put(column, value);
 
         return Response.status(200).entity(foundCharacterJson).build();
     }
@@ -43,14 +33,19 @@ public class CharacterRequests {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/{column}/{value}/{column2}/{value2}")
-    public Response processMultiParamRequest(@PathParam("column") String column, @PathParam("value") String value,
+    public Response multiParamRequest(@PathParam("column") String column, @PathParam("value") String value,
                                              @PathParam("column2") String secondaryColumn, @PathParam("value2") String secondaryValue) throws JsonProcessingException {
-        GenericDao dao = new GenericDao(Character.class);
 
         Map<String, Object> searchParamMap = new HashMap<>();
         searchParamMap.put(column, value);
         searchParamMap.put(secondaryColumn, secondaryValue);
 
+        return Response.status(200).entity(processRequest(searchParamMap)).build();
+    }
+
+    public String processRequest(Map searchParamMap) {
+
+        GenericDao dao = new GenericDao(Character.class);
         List<Character> characters = dao.findByPropertyEqual(searchParamMap);
 
         ObjectMapper mapper = new ObjectMapper();
@@ -61,6 +56,7 @@ public class CharacterRequests {
 
         }
 
-        return Response.status(200).entity(foundCharacterJson).build();
+        return foundCharacterJson;
+
     }
 }
