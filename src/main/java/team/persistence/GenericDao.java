@@ -72,20 +72,6 @@ public class GenericDao<T> {
     }
 
     /**
-     * Gets by name.
-     *
-     * @param <T> the type parameter
-     * @param name  the name
-     * @return the team.entity
-     */
-    public <T> T getByName(String name) {
-        Session session = getSession();
-        T entity = (T)session.get(type, name);
-        session.close();
-        return entity;
-    }
-
-    /**
      * Delete
      *
      * @param entity the team.entity
