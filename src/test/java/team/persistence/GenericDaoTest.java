@@ -34,17 +34,29 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
     }
 
     /**
-     * Verify successful retrieval of a Character
+     * Verify successful retrieval of a Character by name
      */
     @Test
-    void getByIdSuccess() {
+    void getByNameSuccess() {
+        List<Character>  characterList = dao.findByPropertyEqual("name", "Gandalf");
+        for (Character retrievedCharacter: characterList) {
 
-        Character retrievedCharacter = (Character) dao.getById(1);
-//        assertNotNull(retrievedCharacter);
-        assertEquals("Gandalf", retrievedCharacter.getName());
+            assertEquals("Gandalf", retrievedCharacter.getName());
+        }
+
 
 
     }
+
+     @Test
+     void getByIdSuccess() {
+
+         Character retrievedCharacter = (Character) dao.getById(1);
+//        assertNotNull(retrievedCharacter);
+         assertEquals("Gandalf", retrievedCharacter.getName());
+
+
+     }
 
     /**
      * Verify successful insert of a Character
